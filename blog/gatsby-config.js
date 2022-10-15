@@ -10,7 +10,15 @@ module.exports = {
     }
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId:`wprxd8i880sc`,
+        accessToken: `tP75NG22mtgBt-veu6z-TsIIfUlizvzNp6NRAwq05xk`
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
