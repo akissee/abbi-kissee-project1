@@ -1,8 +1,13 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`
+})
+
 module.exports = {
   siteMetadata: {
     title: `Workout Time Tracker`,
     description: `Put in your Start and End times and find out your total workout time for the day!`,
     author: `Abbi Kissee`,
+    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
     contact: {
       name: `Abbi Kissee`,
       company: `WTT Inc.`,
@@ -10,13 +15,12 @@ module.exports = {
     }
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId:`wprxd8i880sc`,
-        accessToken: `tP75NG22mtgBt-veu6z-TsIIfUlizvzNp6NRAwq05xk`
+        spaceId:`${process.env.SPACE_ID}`,
+        accessToken: `${process.env.ACCESS_TOKEN}`
       }
     },
     {
