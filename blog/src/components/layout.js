@@ -11,7 +11,7 @@
  import styled, { ThemeProvider } from 'styled-components'
  
  import { Blue } from './themes/Blue'
- import Header from "./header"
+ import { Header } from "./Header"
  import "./layout.css"
  
  const Content = styled.div`
