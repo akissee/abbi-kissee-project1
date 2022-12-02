@@ -13,7 +13,9 @@
  import { Blue } from './themes/Blue'
  import { Header } from "./Header"
  import "./layout.css"
- 
+ import { Main } from './Main'
+ import { Footer } from './Footer'
+
  const Content = styled.div`
    margin: 0 auto;
    max-width: var(--size-content);
@@ -35,8 +37,8 @@
      <ThemeProvider theme={Blue}>
        <Header siteTitle={data.site.siteMetadata.title || `Title`} />
        <Content>
-         <main>{children}</main>
-         <footer
+         <Main>{children}</Main>
+         <Footer
            style={{
              marginTop: `var(--space-5)`,
              fontSize: `var(--font-sm)`,
@@ -45,7 +47,7 @@
            © {new Date().getFullYear()} &middot; Built with
            {` `}
            <a href="https://www.gatsbyjs.com">Gatsby</a>
-         </footer>
+         </Footer>
        </Content>
      </ThemeProvider>
    )
